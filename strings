@@ -1,25 +1,25 @@
-NO_OF_CHARS = 256
+CHARS = 256
   
-def max_distinct_char(str, n): 
-    count = [0] * NO_OF_CHARS
+def max_distinct_char(str1, n): 
+    count1 = [0] * CHARS
     for i in range(n): 
-        count[ord(str[i])] += 1
+        count1[ord(str1[i])] += 1
       
-    max_distinct = 0
-    for i in range(NO_OF_CHARS): 
-        if (count[i] != 0): 
-            max_distinct += 1    
+    m_distinct = 0
+    for i in range(CHARS): 
+        if (count1[i] != 0): 
+            m_distinct += 1    
       
-    return max_distinct 
+    return m_distinct 
   
-def smallesteSubstr_maxDistictChar(str): 
+def smallesteSubstr_maxDistictChar(str1): 
   
-    n = len(str)
-    max_distinct = max_distinct_char(str, n) 
-    minl = n    
-    for i in range(n): 
-        for j in range(n): 
-            subs = str[i:j] 
+    n1 = len(str1)
+    max_distinct = max_distinct_char(str1, n1) 
+    minl = n1    
+    for i in range(n1): 
+        for j in range(n1): 
+            subs = str1[i:j] 
             subs_lenght = len(subs) 
             sub_distinct_char = max_distinct_char(subs,  
                                                   subs_lenght) 
@@ -31,8 +31,10 @@ def smallesteSubstr_maxDistictChar(str):
   
 if __name__ == "__main__": 
       
-    str = 
+    str1 = str(input())
       
-    l = smallesteSubstr_maxDistictChar(str); 
+    l = smallesteSubstr_maxDistictChar(str1); 
     print(l) 
+
+
   
